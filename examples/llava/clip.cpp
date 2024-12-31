@@ -8,25 +8,25 @@
 #include "ggml-alloc.h"
 #include "ggml-backend.h"
 
-//#ifdef GGML_USE_CUDA
-//#include "ggml-cuda.h"
-//#endif
-//
-//#ifdef GGML_USE_SYCL
-//#include "ggml-sycl.h"
-//#endif
-//
-//#ifdef GGML_USE_METAL
-//#include "ggml-metal.h"
-//#endif
-//
-//#ifdef GGML_USE_CANN
-//#include "ggml-cann.h"
-//#endif
-//
-//#ifdef GGML_USE_VULKAN
-//#include "ggml-vulkan.h"
-//#endif
+#ifdef GGML_USE_CUDA
+#include "ggml-cuda.h"
+#endif
+
+#ifdef GGML_USE_SYCL
+#include "ggml-sycl.h"
+#endif
+
+#ifdef GGML_USE_METAL
+#include "ggml-metal.h"
+#endif
+
+#ifdef GGML_USE_CANN
+#include "ggml-cann.h"
+#endif
+
+#ifdef GGML_USE_VULKAN
+#include "ggml-vulkan.h"
+#endif
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
